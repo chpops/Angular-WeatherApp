@@ -1,5 +1,5 @@
 .wwidget{
-    margin-top: 28px;
+    margin-top: 18px;
     color: #21A9B0;
     display: block;
     margin-left: auto;
@@ -7,8 +7,8 @@
     border-radius: 16px;
     width: 320px;
     height: 480px; 
-    background: rgb(0, 4, 255);
-    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(8,7,42,1));
+   
+    background: linear-gradient(180deg, rgb(238, 95, 52) 2%, rgb(0, 0, 0));
     color: white;
 }
 
@@ -54,4 +54,10 @@
 @keyframes cloudMovement{
     from{margin-left: -80px;}
     to{margin-left: 95px;}
+}
+
+#currentTemp{
+    font-size: 72px; 
+    margin-top: 6px;
+    text-shadow: 3px 10px rgba(0,0,0, 0.6);
 }

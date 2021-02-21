@@ -9,17 +9,6 @@
 </head>
 
 <body>
-  <div id="d"></div>
-  <script>
-    var d = document.getElementById("d");
-    navigator.geolocation.getCurrentPosition(
-      function(position){
-
-        d.innerHTML = "Ваши координаты широта:" + " " + position.coords.latitude + " " + "Долгота" + " " + position.coords.longitude + " " 
-        + " точность определения: " + position.coords.accuracy;
-      });
-  </script>
-
   <app-root>Loading app <span class="d">.</span><span class="d d-2">.</span><span class="d d-3">.</span></app-root>
 </body>
 </html>
