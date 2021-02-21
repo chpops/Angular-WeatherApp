@@ -12,8 +12,6 @@ h1{
 
 app-root {
     height: 100vh;
-    color: #39b0f5;
-    text-transform: uppercase;
     font-family: -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
@@ -29,7 +27,7 @@ app-root {
   body {
     margin: 0;
     padding: 0;
-    background-image: url('../src/assets/background.jpg');
+    background-image: url('./assets/background.jpg');
     background-size: cover;
     background-position: top center;
   }
