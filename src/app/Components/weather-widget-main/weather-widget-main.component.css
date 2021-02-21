@@ -7,7 +7,7 @@
     border-radius: 16px;
     width: 320px;
     height: 480px; 
-    background: black;
+    background: rgb(0, 4, 255);
     background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(8,7,42,1));
     color: white;
 }
@@ -36,22 +36,22 @@
 }
 
 .cloudDiv{
-    margin-top: -80px;
+    margin-top: -90px;
 }
 
 .cloud{
-    width: 110px;
-    height: 110px;
+    width: 78px;
+    height: 92px;
     color: rgb(55, 164, 228);
     filter: drop-shadow(1px 1px 5px rgb(55, 164, 228));
     animation-name: cloudMovement;
     animation-iteration-count: infinite;
-    animation-duration: 10s;
+    animation-duration: 12s;
     animation-timing-function: ease-in-out;
     animation-direction: alternate;
 }
 
 @keyframes cloudMovement{
-    from{margin-left: -55px;}
-    to{margin-left: 65px;}
+    from{margin-left: -80px;}
+    to{margin-left: 95px;}
 }
