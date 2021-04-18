@@ -1,1 +1,1 @@
-# AngularWeatherApp
+# Small Angular Weather Application
