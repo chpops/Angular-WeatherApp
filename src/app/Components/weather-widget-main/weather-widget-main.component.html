@@ -1,7 +1,13 @@
 <div class="weatherCurrent">
-    <div class="searchBox">
-        <input class="inputSearch" type="text" placeholder="Search for a city ...">&emsp;
+    <div class="rules">
+        <h1>Angular Weather App</h1>
+        <p>Привет. Это маленькое приложение является небольшим погодным виджетом</p>
+        <p>Вы можете узнать информацию о погоде, введя в поле для ввода нужный вам город</p>
+        <p>Ввод input поддерживается как на Английском, так и Русском языке</p>
     </div>
+    <form (submit)="onSubmit()">
+            <input [(ngModel)]="inputCity" class="inputSearch" [ngModelOptions]="{standalone: true}" placeholder="Input name of the city and click Enter ..." title="Введите название города и нажмите Enter">
+    </form>
 
     <div class="wwidget">
         <div *ngIf="WeatherData.isDay" class="weatherWidgetRow">

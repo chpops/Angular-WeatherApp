@@ -1,13 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-weather-widget-main',
   templateUrl: './weather-widget-main.component.html',
   styleUrls: ['./weather-widget-main.component.css']
 })
+
 export class WeatherWidgetMainComponent implements OnInit {
 
+  inputCity: string;
+  defaultCity: string = 'Moscow';
   WeatherData: any;
+  currentCity: string;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -15,13 +20,17 @@ export class WeatherWidgetMainComponent implements OnInit {
       main : {},
       isDay: true
     };
-    this.getWeatherData();
-
-    
+    this.getWeatherData(this.defaultCity);
   }
 
-  getWeatherData(){
-    fetch('https://api.openweathermap.org/data/2.5/weather?q=Moscow&appid=373afb9fe7d2587cd3837754899bf7f1')
+  onSubmit(){
+    fetch('https://api.openweathermap.org/data/2.5/weather?q='+this.inputCity+'&appid=373afb9fe7d2587cd3837754899bf7f1')
+    .then(response=>response.json())
+    .then(data=>{this.setWeatherData(data);})
+  }
+
+  getWeatherData(defaultCity){
+    fetch('https://api.openweathermap.org/data/2.5/weather?q='+defaultCity+'&appid=373afb9fe7d2587cd3837754899bf7f1')
     .then(response=>response.json())
     .then(data=>{this.setWeatherData(data);})
   } 
